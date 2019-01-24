@@ -26,11 +26,11 @@ main:
 
 	add $t3, $t0, $t1
 	li $t4 , 1
-	shl $t3, $t4
+	sll $t8, $t3, $t4
 	li $t5, 3
 	mult $t5, $t2
 	mflo $t6
-	sub $t7, $t3, $t6
+	sub $t7, $t8, $t6
 
 	li $v0, 1
 	move $a0, $t7
