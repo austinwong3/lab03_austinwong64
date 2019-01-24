@@ -20,7 +20,8 @@ main:
 
 	add $t3, $t0, $t1
 	sll $t3, $t3, 1
-	mult 3, $t2
+	li $t6, 3
+	mult $t2, $t6
 	mflo $t4
 	sub $t5, $t3, $t4
 
