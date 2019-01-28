@@ -7,13 +7,33 @@
 	prompt1: .asciiz "Give me an integer number between 0 and 1000:\n"
 	hello: .asciiz "Hello World!\n"
 	chose: .asciiz "User chose "
-	but: .asciiz ". But is it the right answer?!"
+	but: .asciiz ". But is it the right answer?!\n"
 
 #Text Area (i.e. instructions)
 .text
 main:
 
-	# TODO: Write your code here
+	li	$v0, 4
+	la $a0, prompt1
+	syscall
+
+	li	$v0, 5	
+	move $t0, $v0
+	syscall
+
+	li	$v0, 4
+	la $a0, hello
+	syscall
+
+	li	$v0, 1
+	move $a0, $t0
+	syscall
+
+	li	$v0, 4
+	la $a0, but
+	syscall
+
+
 
 exit:
 	# Exit
