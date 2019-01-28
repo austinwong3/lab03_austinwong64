@@ -25,6 +25,10 @@ main:
 	la $a0, hello
 	syscall
 
+	li	$v0, 4
+	la $a0, chose
+	syscall
+
 	li	$v0, 1
 	move $a0, $t0
 	syscall
