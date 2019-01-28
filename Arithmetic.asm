@@ -7,16 +7,19 @@ main:
 
 	# TODO: Write your code here
 	li	$v0, 5	
+	syscall
 	move $t0, $v0
-	syscall
+	
 
 	li	$v0, 5	
+	syscall
 	move $t1, $v0
-	syscall
+	
 
 	li	$v0, 5	
-	move $t2, $v0
 	syscall
+	move $t2, $v0
+
 
 	add $t3, $t0, $t1
 	sll $t3, $t3, 1
